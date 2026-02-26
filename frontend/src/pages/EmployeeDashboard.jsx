@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../utils/api';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import LeaveForm from '../components/LeaveForm';
