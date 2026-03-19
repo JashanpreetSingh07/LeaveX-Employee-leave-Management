@@ -61,3 +61,13 @@ For project viewers and testing purposes, here are pre-configured accounts you c
 - **Email**: `abcd@gmail.com`
 - **Password**: `abcd`
 - **Role**: Employee (Can submit leave requests and reimbursement claims)
+
+## Live Demo (GitHub Pages)
+
+A public demo is automatically built and deployed whenever changes are pushed to **main**.
+
+You can access the live frontend at:
+
+https://jashanpreetsingh07.github.io/LeaveX-Employee-leave-Management/
+
+> ⚠️ Note: This demo is the **frontend only**. The backend API requires a running server (e.g., via `npm run dev` in `backend/`) and a configured MongoDB connection.
