@@ -62,12 +62,23 @@ For project viewers and testing purposes, here are pre-configured accounts you c
 - **Password**: `abcd`
 - **Role**: Employee (Can submit leave requests and reimbursement claims)
 
-## Live Demo (GitHub Pages)
+## Deployment Options
 
-A public demo is automatically built and deployed whenever changes are pushed to **main**.
+### ✅ GitHub Pages (Frontend Only)
+You can deploy the **frontend** to GitHub Pages using the existing GitHub Actions workflow (`.github/workflows/deploy-gh-pages.yml`).
 
-You can access the live frontend at:
+- Visit: `https://<your-github-username>.github.io/LeaveX-Employee-leave-Management`
+- This is **frontend only** and will not run the backend API.
 
-https://jashanpreetsingh07.github.io/LeaveX-Employee-leave-Management/
+### 🚀 Vercel (Full Stack: Frontend + Backend)
+To run the full MERN stack (frontend + backend API) with a single public link, deploy the repo to Vercel.
 
-> ⚠️ Note: This demo is the **frontend only**. The backend API requires a running server (e.g., via `npm run dev` in `backend/`) and a configured MongoDB connection.
+1. Sign in at https://vercel.com and connect your GitHub account.
+2. Create a new project and select this repository.
+3. When prompted, set the following Environment Variables (from `backend/.env`):
+   - `MONGO_URI` (your MongoDB connection string)
+   - `JWT_SECRET` (your JWT signing secret)
+
+After deployment, Vercel will provide a public URL (e.g. `https://<project-name>.vercel.app`). That URL will serve the full app (frontend + backend API).
+
+> 💡 Note: GitHub Pages cannot host the backend API because it only serves static assets. Vercel is the recommended option for a full-stack deployment.
