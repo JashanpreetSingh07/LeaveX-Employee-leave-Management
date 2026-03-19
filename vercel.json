@@ -3,6 +3,13 @@
   "buildCommand": "npm install --prefix frontend && npm run build --prefix frontend",
   "outputDirectory": "frontend/dist",
   "installCommand": "npm install --prefix backend && npm install --prefix frontend",
+  "functions": {
+    "api/index.js": {
+      "runtime": "@vercel/node@3",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
   "routes": [
     {
       "src": "/api/(.*)",
